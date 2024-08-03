@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russel - 403 error fix</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #232323; /* Set background color */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            overflow: hidden;
+            animation: backgroundAnimation 15s ease-in-out infinite;
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            animation: scaleIn 1s ease-out forwards;
+            z-index: 2;
+        }
+        .main-text, .description, .sub-text, .button {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        .main-text {
+            font-size: 40px;
+            font-weight: bold;
+            animation: fadeInUp 1s ease-out forwards, bounceIn 1s 0.5s ease-out forwards;
+        }
+        .description {
+            font-size: 18px;
+            margin: 20px 0;
+            animation: fadeInUp 1s 0.5s ease-out forwards, bounceIn 1s 1s ease-out forwards;
+        }
+        .sub-text {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0;
+            animation: fadeInUp 1s 1s ease-out forwards, bounceIn 1s 1.5s ease-out forwards;
+        }
+        .button {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background-color: #ff0000;
+            border: none;
+            border-radius: 25px;
+            padding: 15px 30px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1s 1.5s ease-out forwards, buttonHover 1s 2s infinite;
+        }
+        .button:hover {
+            background-color: #f38405;
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+        .additional-box {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            margin: 20px 0;
+            animation: scaleIn 1s ease-out forwards;
+            z-index: 1;
+            text-align: left;
+        }
+        .additional-box h2 {
+            margin-top: 0;
+            font-size: 24px;
+            font-weight: bold;
+            color: #f39c12;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        .additional-box p {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #ecf0f1;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #f39c12;
+        }
+        .faq-answer {
+            margin: 0;
+            color: #ecf0f1;
+        }
+        @keyframes backgroundAnimation {
+            0% { background: #232323; }
+            50% { background: #292929; }
+            100% { background: #232323; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes scaleIn {
+            from { transform: scale(0.9); }
+            to { transform: scale(1); }
+        }
+        @keyframes bounceIn {
+            0% { transform: translateY(-50px); opacity: 0; }
+            50% { transform: translateY(10px); opacity: 1; }
+            100% { transform: translateY(0); }
+        }
+        @keyframes buttonHover {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .discord-section {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            display: flex;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 2;
+        }
+        .discord-section img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .discord-section img:hover {
+            transform: scale(1.1);
+        }
+        .discord-section a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #f39c12;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .discord-section span {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-text">Russel - NM1 Roblox Fixer</div>
+        <div class="description">
+            Are you experiencing errors in Roblox? Our NM1 Roblox Fixer tool is here to help! It solves common issues and errors, ensuring a smooth and enjoyable experience while playing your favorite games. With our fully opened source solution, you can trust in its reliability and effectiveness.
+        </div>
+        <div class="sub-text">( Fully Opened Source )</div>
+        <a href="https://gofile.io/d/3z95us" target="_blank" class="button">Download - Free ( SRS CODE ) - GOFILE.IO</a>
+    </div>
+    <div class="additional-box">
+        <h2>We Are Open Source, Ready To Be Trusted!</h2>
+    </div>
+    <div class="additional-box">
+        <h2>FAQ</h2>
+        <div class="faq-item">
+            <p class="faq-question">How Does This Work?</p>
+            <p class="faq-answer">When you run the NM1 Roblox Fixer, it performs the following steps:</p>
+            <p class="faq-answer">
+                1. **Locate Roblox Folder**: The tool searches for the Roblox folder in your AppData files.
+            </p>
+            <p class="faq-answer">
+                2. **Delete Existing Folder**: It deletes the Roblox folder completely.
+            </p>
+            <p class="faq-answer">
+                3. **Download and Install**: The tool then automatically downloads the latest Roblox launcher and installs it.
+            </p>
+            <p class="faq-answer">
+                4. **Error Fix**: By doing this, the tool fixes the errors you were encountering with Roblox.
+            </p>
+        </div>
+    </div>
+    <div class="discord-section">
+        <a href="https://discord.gg/WB8d27x2pa" target="_blank">
+            <img src="ss.png" alt="Discord Icon">
+            <span>Join The Discord Server!</span>
+        </a>
+    </div>
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const { clientX: x, clientY: y } = e;
+            const mainText = document.querySelector('.main-text');
+            const description = document.querySelector('.description');
+            const subText = document.querySelector('.sub-text');
+            const button = document.querySelector('.button');
+            mainText.style.transform = `translate(${x * 0.05}px, ${y * 0.05}px)`;
+            description.style.transform = `translate(${x * 0.02}px, ${y * 0.02}px)`;
+            subText.style.transform = `translate(${x * 0.03}px, ${y * 0.03}px)`;
+            button.style.transform = `translate(${x * 0.01}px, ${y * 0.01}px)`;
+        });
+    </script>
+</body>
+</html>
